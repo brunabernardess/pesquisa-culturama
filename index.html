@@ -6,6 +6,44 @@
   <title>Pesquisa Culturama</title>
 </head>
 <body>
+  <header>
+    <h1>Pesquisa Online</h1>
+  </header>
+  <section>
+      <form action="" method="get">
+        
+          <!-- Fieldser e legend são tags semânticas que determina uma sequencia de inputs que estarão agrupados-->
+
+       <fieldset> <!-- a tag FIELDSET mostra para o navegador que todas a informações do formulário que estão dentro dela, partem da mesmo tópico nesse caso sendo DADOS PESSOAIS ela cria uma borda dividiando os tópicos a serem preenchidos e criando um agrupamento -->
+
+          <!-- Dados Pessoais -->
+
+          <legend>Dados Pessoais</legend> <!-- a tag LEGEND coloca um nome para o agrupamento criado  -->
+
+            <label for="userName">Nome</label> <!-- Label é tag para indicar o que deve ser preenchido no campo do formulário -->
+            <input type="text" name="userNAme" required> <!-- INPUT é tag que indica uma entrada de informação e o TYPE é sobre o tipo de informação o navegador pode receber - REQUIRED significa que essa informação deve ser preenchida obrigatóriamente  -->
+            <br>
+            <label for="age">Idade</label>
+            <input type="number" name="age" min="12" max="100" required>  <!-- o MIN E MAX é o intervalo de valores que o navegador deve aceitar quando o TYPE é um NUMBER  -->
+            <br>
+            <label for="birthDate">Data de Nascimento</label>
+            <input type="date" name="birthDate">
+            <br>
+            <label for="userEmail">Email</label>
+            <input type="email" name="userEmail" required>
+            <br>
+            <label for="userPhoneNumber">Telefone</label>
+            <input type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="Apenas os digitos"> <!-- Usa o atributo PATTERN para identificar um padrão na informação, no caso por ser um telefone indicamos entre [] que seráo numeros de 0-9 e entre {} a quantidade de numeros aceitos neste campo e o atributo PLACEHOLDER para aparecer uma mensagem de como deve ser preenchido dentro do campo do formulário -->
+            <br>
+            <label for="userImage">Upload de foto</label>
+            <input type="file" accept="image/*" name="userImage"> <!-- o atributo ACCEPT informa qual tipo de aquivo esse campo deve aceitar e a definição "IMAGE/*" mostra que deve aceitar qualquer tipo de imagem e somente imagem -->
+            <br>
+
+          </fieldset>
+          <button type="submit">Enviar</button>
+
+       </form>
+  </section>
 
 </body>
 </html>
