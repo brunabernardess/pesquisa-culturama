@@ -11,7 +11,7 @@
   </header>
   <section>
       <form action="" method="get">
-        
+
           <!-- Fieldser e legend são tags semânticas que determina uma sequencia de inputs que estarão agrupados-->
 
        <fieldset> <!-- a tag FIELDSET mostra para o navegador que todas a informações do formulário que estão dentro dela, partem da mesmo tópico nesse caso sendo DADOS PESSOAIS ela cria uma borda dividiando os tópicos a serem preenchidos e criando um agrupamento -->
@@ -39,7 +39,20 @@
             <input type="file" accept="image/*" name="userImage"> <!-- o atributo ACCEPT informa qual tipo de aquivo esse campo deve aceitar e a definição "IMAGE/*" mostra que deve aceitar qualquer tipo de imagem e somente imagem -->
             <br>
 
-          </fieldset>
+        </fieldset>
+        <fieldset>
+          <legend>Perfil</legend>
+
+              <p>Gênero:</p>
+             <input type="radio" name="userGender" value="Feminino"> <!-- Essa TYPE "RADIO" Me da opções de seleções e não caixa de inserir dados, no caso ela é ao contrario, a tag label fica depois da tag input e o atributo Value é para que o navegador entenda a informação que está sendo selecionado -->
+             <label for="userGender">Feminino</label>
+             <input type="radio" name="userGender" value="Masculino">
+             <label for="userGender">Masculino</label>
+             <input type="radio" name="userGender" value="notInformed">
+             <label for="userGender">Não Informar</label>
+
+        </fieldset>
+
           <button type="submit">Enviar</button>
 
        </form>
