@@ -20,23 +20,23 @@
 
           <legend>Dados Pessoais</legend> <!-- a tag LEGEND coloca um nome para o agrupamento criado  -->
 
-            <label for="userName">Nome</label> <!-- Label é tag para indicar o que deve ser preenchido no campo do formulário -->
-            <input type="text" name="userNAme" required> <!-- INPUT é tag que indica uma entrada de informação e o TYPE é sobre o tipo de informação o navegador pode receber - REQUIRED significa que essa informação deve ser preenchida obrigatóriamente  -->
+            <label for="name">Nome</label> <!-- Label é tag para indicar o que deve ser preenchido no campo do formulário -->
+            <input id="name" type="text" name="userNAme" required> <!-- INPUT é tag que indica uma entrada de informação e o TYPE é sobre o tipo de informação o navegador pode receber - REQUIRED significa que essa informação deve ser preenchida obrigatóriamente  -->
             <br>
             <label for="age">Idade</label>
-            <input type="number" name="age" min="12" max="100" required>  <!-- o MIN E MAX é o intervalo de valores que o navegador deve aceitar quando o TYPE é um NUMBER  -->
+            <input id="age" type="number" name="Userage" min="12" max="100" required>  <!-- o MIN E MAX é o intervalo de valores que o navegador deve aceitar quando o TYPE é um NUMBER  -->
             <br>
             <label for="birthDate">Data de Nascimento</label>
-            <input type="date" name="birthDate">
+            <input id="birthDate" type="date" name="userBirthDate">
             <br>
-            <label for="userEmail">Email</label>
-            <input type="email" name="userEmail" required>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="userEmail" required>
             <br>
-            <label for="userPhoneNumber">Telefone</label>
-            <input type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="Apenas os digitos"> <!-- Usa o atributo PATTERN para identificar um padrão na informação, no caso por ser um telefone indicamos entre [] que seráo numeros de 0-9 e entre {} a quantidade de numeros aceitos neste campo e o atributo PLACEHOLDER para aparecer uma mensagem de como deve ser preenchido dentro do campo do formulário -->
+            <label for="PhoneNumber">Telefone</label>
+            <input id="phoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="Apenas os digitos"> <!-- Usa o atributo PATTERN para identificar um padrão na informação, no caso por ser um telefone indicamos entre [] que seráo numeros de 0-9 e entre {} a quantidade de numeros aceitos neste campo e o atributo PLACEHOLDER para aparecer uma mensagem de como deve ser preenchido dentro do campo do formulário -->
             <br>
             <label for="userImage">Upload de foto</label>
-            <input type="file" accept="image/*" name="userImage"> <!-- o atributo ACCEPT informa qual tipo de aquivo esse campo deve aceitar e a definição "IMAGE/*" mostra que deve aceitar qualquer tipo de imagem e somente imagem -->
+            <input id="userImage" type="file" accept="image/*" name="userImage"> <!-- o atributo ACCEPT informa qual tipo de aquivo esse campo deve aceitar e a definição "IMAGE/*" mostra que deve aceitar qualquer tipo de imagem e somente imagem -->
             <br>
 
         </fieldset>
@@ -44,12 +44,12 @@
           <legend>Perfil</legend>
 
               <p>Gênero:</p>
-             <input type="radio" name="userGender" value="Feminino"> <!-- Essa TYPE "RADIO" Me da opções de seleções e não caixa de inserir dados, no caso ela é ao contrario, a tag label fica depois da tag input e o atributo Value é para que o navegador entenda a informação que está sendo selecionado -->
-             <label for="userGender">Feminino</label>
-             <input type="radio" name="userGender" value="Masculino">
-             <label for="userGender">Masculino</label>
-             <input type="radio" name="userGender" value="notInformed">
-             <label for="userGender">Não Informar</label>
+             <input id="fem" type="radio" name="userGender" value="Feminino"> <!-- Essa TYPE "RADIO" Me da opções de seleções e não caixa de inserir dados, no caso ela é ao contrario, a tag label fica depois da tag input e o atributo Value é para que o navegador entenda a informação que está sendo selecionado -->
+             <label for="fem">Feminino</label>
+             <input id="masc" type="radio" name="userGender" value="Masculino">
+             <label for="masc">Masculino</label>
+             <input id="notInformed" type="radio" name="userGender" value="notInformed">
+             <label for="notInformed">Não Informar</label>
                 <br>
 
              <label for="maritalStatus">Estado Civil</label>
@@ -61,8 +61,8 @@
                 <option value="uniao">União estável</option>
              </select>
 
-             <label for="userState">Estado</label>
-             <select name="userState" id="">
+             <label for="state">Estado</label>
+             <select name="userState" id="state">
                 <option value="notInformes">Selecione</option>
                 <option value="acre">Acre</option>
                 <option value="alagoas">Alagoas</option>
@@ -93,23 +93,23 @@
                 <option value="tocantins">Tocantins</option>
               </select>
                 <br>
-                <label for="userCity">Cidade</label>
-                <input type="text" name="userCity">
+                <label for="city">Cidade</label>
+                <input id="city" type="text" name="userCity">
         </fieldset>
         <fieldset>
           <legend>Habitos</legend>
             <p>Redes Sociais</p>
-          <input type="checkbox" name="social" value="instagram"> <!-- o Type do input aqui é checkbox que é quadrado e permite que eu selecione mais de uma informação, o radio é redondo e somente me permite uma seleção -->
-          <label for="social">Instagram</label>
+          <input id="instagram" type="checkbox" name="social" value="instagram"> <!-- o Type do input aqui é checkbox que é quadrado e permite que eu selecione mais de uma informação, o radio é redondo e somente me permite uma seleção -->
+          <label for="instagram">Instagram</label>
           <br>
-          <input type="checkbox" name="social" value="facebookFacebook">
-          <label for="social">Facebook</label>
+          <input id="facebook" type="checkbox" name="social" value="facebook">
+          <label for="facebook">Facebook</label>
           <br>
-          <input type="checkbox" name="social" value="linkedin">
-          <label for="social">LinkeInd</label>
+          <input id="linkeinc" type="checkbox" name="social" value="linkedin">
+          <label for="linkedin">LinkeInd</label>
           <br>
-          <input type="checkbox" name="social" value="x">
-          <label for="social">X</label>
+          <input id="x" type="checkbox" name="social" value="x">
+          <label for="x">X</label>
 
         </fieldset>
 
