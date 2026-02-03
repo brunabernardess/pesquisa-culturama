@@ -45,7 +45,8 @@
             <small id="phoneHelp">Preencha com 11 digitos no formato: DDD + números sem espaços ou hífen</small>
             <br>
             <label for="userImage">Upload de foto</label>
-            <input id="userImage" type="file" accept="image/*" name="userImage"> <!-- o atributo ACCEPT informa qual tipo de aquivo esse campo deve aceitar e a definição "IMAGE/*" mostra que deve aceitar qualquer tipo de imagem e somente imagem -->
+            <input id="userImage" type="file" accept="image/*" name="userImage" aria-describedby="imageHelp"> <!-- o atributo ACCEPT informa qual tipo de aquivo esse campo deve aceitar e a definição "IMAGE/*" mostra que deve aceitar qualquer tipo de imagem e somente imagem -->
+            <small id="imageHelp">Envie uma foto no formato PNG ou JPEG</small>
             <br>
 
         </fieldset>
