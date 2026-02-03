@@ -41,10 +41,12 @@
             <input id="email" type="email" name="userEmail" required>
             <br>
             <label for="phoneNumber">Telefone</label>
-            <input id="phoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="Apenas os digitos"> <!-- Usa o atributo PATTERN para identificar um padrão na informação, no caso por ser um telefone indicamos entre [] que seráo numeros de 0-9 e entre {} a quantidade de numeros aceitos neste campo e o atributo PLACEHOLDER para aparecer uma mensagem de como deve ser preenchido dentro do campo do formulário -->
+            <input id="phoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="Apenas os digitos" aria-describedby="phoneHelp"> <!-- Usa o atributo PATTERN para identificar um padrão na informação, no caso por ser um telefone indicamos entre [] que seráo numeros de 0-9 e entre {} a quantidade de numeros aceitos neste campo e o atributo PLACEHOLDER para aparecer uma mensagem de como deve ser preenchido dentro do campo do formulário -->
+            <small id="phoneHelp">Preencha com 11 digitos no formato: DDD + números sem espaços ou hífen</small>
             <br>
             <label for="userImage">Upload de foto</label>
-            <input id="userImage" type="file" accept="image/*" name="userImage"> <!-- o atributo ACCEPT informa qual tipo de aquivo esse campo deve aceitar e a definição "IMAGE/*" mostra que deve aceitar qualquer tipo de imagem e somente imagem -->
+            <input id="userImage" type="file" accept="image/*" name="userImage" aria-describedby="imageHelp"> <!-- o atributo ACCEPT informa qual tipo de aquivo esse campo deve aceitar e a definição "IMAGE/*" mostra que deve aceitar qualquer tipo de imagem e somente imagem -->
+            <small id="imageHelp">Envie uma foto no formato PNG ou JPEG</small>
             <br>
 
         </fieldset>
@@ -157,8 +159,8 @@
         </fieldset>
 
         <form action="sucesso.html" target="_blank">
-    <button type="submit" formaction="sucesso.html">Enviar</button>
-    <button type="reset">Limpar</button>
+    <button type="submit" formaction="sucesso.html" aria-label="Enviar dados do formulário">Enviar</button>
+    <button type="reset" aria-label="Limpar dados dos formulário">Limpar</button>
         </form>
 
        </form>
